@@ -2,7 +2,7 @@
 ID: "23122023120817"
 tags:
   - machine-learning
-  - "#classification"
+  - classification
 aliases:
   - kNN Classifier
 ---
