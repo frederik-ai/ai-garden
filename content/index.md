@@ -1,5 +1,6 @@
-...to my personal Zettelkasten 👋
-If you don't want to read the following two headings and would just like to see what this page is about, check out these notes: [[SIFT]], [[R-CNN]] or [[Markov Chain Monte Carlo]].
+---
+title: Welcome 👋
+---
 # What is this?
 My name is Frederik and these are my personal lecture notes that I take for my [university courses](https://ekvv.uni-bielefeld.de/sinfo/publ/master-as/intsys;lang=EN). I am a M.Sc. student in the field of AI at University of Bielefeld, Germany. If you are, like me, interested in Computer Vision, Machine Learning, etc. this site might be interesting to you.
 # How is this organized?
