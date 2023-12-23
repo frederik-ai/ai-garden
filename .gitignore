@@ -1,3 +1,6 @@
+content/.obsidian
+content/.trash
+
 .DS_Store
 .gitignore
 node_modules

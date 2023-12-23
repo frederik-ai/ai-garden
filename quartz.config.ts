@@ -3,14 +3,14 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "🧠 AI Notes",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "v4--boisterous-valkyrie-9cf2a6.netlify.app",
+    ignorePatterns: ["private", "templates", ".obsidian", "Templates", "Excalidraw"],
     defaultDateType: "created",
     theme: {
       typography: {

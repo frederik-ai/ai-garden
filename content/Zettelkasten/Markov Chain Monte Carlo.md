@@ -1,9 +1,11 @@
 ---
+ID: "081220232338"
+tags:
+  - cognitive-computing
+  - sampling
 aliases:
   - MCMC
 ---
-081220232338
-Tags: #cognitive-computing #sampling 
 # Motivation
 Markov Chain Monte Carlo is used to sample from a given multivariate distribution.
 Why do we need this?
