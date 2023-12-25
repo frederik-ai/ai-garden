@@ -1,2 +1,6 @@
-081220232348
-Tags: #cognitive-computing #TODO 
+---
+ID: "081220232348"
+tags:
+  - cognitive-computing
+  - TODO
+---

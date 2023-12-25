@@ -1,6 +1,9 @@
-161220232033
-Tags: #computer-vision #object-detection 
-
+---
+ID: "161220232033"
+tags:
+  - computer-vision
+  - object-detection
+---
 Improved version of [[Fast R-CNN]]
 
 Uses a region proposal network (RPN) to generate the RoIs.  First compute a feature map for the whole image. Then, the RPN proposes RoIs. Feed the feature map and the porposed RoIs into a classifier. 

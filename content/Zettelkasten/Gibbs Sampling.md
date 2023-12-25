@@ -1,6 +1,9 @@
-081220231451
-Tags: #cognitive-computing #sampling
-
+---
+ID: "081220231451"
+tags:
+  - cognitive-computing
+  - sampling
+---
 # Idea
 We want to sample from our full joint distribution $p(x_1, x_2, x_3)$
 But: If the distribution is complicated, it is difficult to sample from this.

@@ -1,6 +1,8 @@
-091220231401
-Tags: #statistical-nlp
-
+---
+ID: "091220231401"
+tags:
+  - statistical-nlp
+---
 Used for tagging contexts x of a sentence with tags y
 -> Approximates probability $p(y|x)$
 # Idea

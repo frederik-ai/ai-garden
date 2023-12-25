@@ -1,5 +1,9 @@
-091220230920
-Tags: #cognitive-computing #sampling 
+---
+ID: "091220230920"
+tags:
+  - cognitive-computing
+  - sampling
+---
 # Idea
 We pick a random starting point in our target distribution. Then, randomly move our point according to another distribution (i.e. normal distribution) and decide whether to accept or reject this new sample. Repeat this process of moving our point to generate samples.
 # Examples

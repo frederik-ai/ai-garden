@@ -1,6 +1,8 @@
-121220232324
-Tags: #computer-vision 
-
+---
+ID: "121220232324"
+tags:
+  - computer-vision
+---
 Purpose: Shrink the size of the input tensor while preserving the most important information.
 A pooling layer has **no trainable parameters**.
 

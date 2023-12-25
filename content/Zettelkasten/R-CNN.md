@@ -1,6 +1,10 @@
-131220231356
-Tags: #TODO #computer-vision #object-detection #two-stage-model
-
+---
+ID: "131220231356"
+tags:
+  - computer-vision
+  - object-detection
+  - two-stage-model
+---
 R-CNN is a Two-Stage object detection model
 
 ![[Pasted image 20231215161512.png]]
