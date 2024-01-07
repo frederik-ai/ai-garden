@@ -51,7 +51,8 @@ export default ((userOpts?: Partial<Options>) => {
                     </p>
                   )}
                   <ul class="tags">
-                    {tags.map((tag) => (
+                    {/* hide the tags
+                    tags.map((tag) => (
                       <li>
                         <a
                           class="internal tag-link"
@@ -60,7 +61,7 @@ export default ((userOpts?: Partial<Options>) => {
                           #{tag}
                         </a>
                       </li>
-                    ))}
+                    ))*/}
                   </ul>
                 </div>
               </li>

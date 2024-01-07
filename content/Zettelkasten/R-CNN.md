@@ -10,8 +10,7 @@ R-CNN is a Two-Stage object detection model
 ![[Pasted image 20231215161512.png]]
 
 # First Stage
-Provides region proposals. [Graph-based image segmentation](https://cs.brown.edu/people/pfelzens/papers/seg-ijcv.pdf) followed by [Selective Search](http://www.huppelen.nl/publications/selectiveSearchDraft.pdf). 
-The graph based segmentation yields very small regions. Selective search gradually merges the most similar regions together until we have only a few regions left. Those regions that are likely to contain an object are fed into the second stage of R-CNN. To determine the objectness of the regions, we calculate use an image pyramid and visual words.
+Provides region proposals. [Graph-based image segmentation](https://cs.brown.edu/people/pfelzens/papers/seg-ijcv.pdf) followed by [Selective Search](http://www.huppelen.nl/publications/selectiveSearchDraft.pdf). The graph based segmentation yields very small regions. Selective search gradually merges the most similar regions together until we have only a few regions left. Those regions that are likely to contain an object are fed into the second stage of R-CNN. To determine the objectness of the regions, we calculate use an image pyramid and visual words.
 
 # Second Stage
 Region is warped into a fixed aspect ratio and size. Then, we feed the image into a CNN. The CNN computes features. A [[Support Vector Machine]] does the classification while a regression model determines the exact bounding box coordinates inside the region.
@@ -28,6 +27,6 @@ Region is warped into a fixed aspect ratio and size. Then, we feed the image int
 - Region is warped -> loss/distortion of information
 - Each region is fed into the CNN individually -> If we have 2000 regions we do 2000 inferences per image
 
----
+# References
 [R-CNN: Clearly EXPLAINED! - YouTube](https://www.youtube.com/watch?v=nJzQDpppFj0)
 [Object Detection for Dummies Part 3: R-CNN Family | Lil'Log (lilianweng.github.io)](https://lilianweng.github.io/posts/2017-12-31-object-recognition-part-3/)

@@ -14,6 +14,9 @@ function PageTitle({ fileData, cfg, displayClass }: QuartzComponentProps) {
 PageTitle.css = `
 .page-title {
   margin: 0;
+  /*text-align: center;*/ /* added */
+  /*padding-bottom: 0.5em;*/ /* added */
+  /*font-size: 1.75em;*/ /* added */
 }
 `
 

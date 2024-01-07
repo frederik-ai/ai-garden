@@ -9,7 +9,7 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "v4--boisterous-valkyrie-9cf2a6.netlify.app",
+    baseUrl: "ai-garden.netlify.app",
     ignorePatterns: ["private", "templates", ".obsidian", "Templates", "Excalidraw"],
     defaultDateType: "created",
     theme: {
