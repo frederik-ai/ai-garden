@@ -21,11 +21,15 @@ const config: QuartzConfig = {
       colors: {
         lightMode: {
           light: "#faf8f8",
+          // light: "#F5F5F2", // from typora newsprint theme
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
+          // darkgray: "#1f0909",
+          // dark: "#2b2b2b",
+          dark: "#1f0909",
           secondary: "#284b63",
+          // secondary: "#111D4A",
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
         },

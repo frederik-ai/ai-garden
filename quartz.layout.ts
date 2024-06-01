@@ -1,5 +1,16 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { IconFolderOptions } from "./quartz/plugins/components/FileIcons";
+import { filterFn, sortFn } from "./quartz/util/function";
+
+const iconsOptions: IconFolderOptions = {
+	rootIconFolder: "content/_assets/icons",
+	default: {
+		file: "file",
+	},
+};
+
+export const secretPage: Set<string> =  new Set(["hidden"])
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -16,8 +27,8 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    //Component.PageTitle()
-    //Component.Search()
+    // Component.PageTitle(),
+    // Component.Search()
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
     Component.ContentMeta(),
@@ -27,14 +38,27 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer({
-      title: "All Notes",
-    })),
-    Component.DesktopOnly(Component.RecentNotes()),
+    // Component.Darkmode(),
+    //Component.DesktopOnly(Component.Explorer({
+    //  // title: "All Notes",
+    //  title: "Notes",
+    // })),
+    Component.DesktopOnly(
+			Component.ExplorerBurger({
+				folderClickBehavior: "link",
+				folderDefaultState: "collapsed",
+				useSavedState: true,
+				title: "",
+				// iconSettings: iconsOptions,
+				sortFn,
+				filterFn
+			})
+    ),
+    // Component.DesktopOnly(Component.RecentNotes()),
   ],
   right: [
-    Component.Graph(),
+    // Component.Graph(),
+    Component.Darkmode(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -47,7 +71,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
+    // Component.Darkmode()
   ],
   right: [],
 }

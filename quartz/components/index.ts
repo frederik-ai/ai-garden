@@ -10,6 +10,7 @@ import ContentMeta from "./ContentMeta"
 import Spacer from "./Spacer"
 import TableOfContents from "./TableOfContents"
 import Explorer from "./Explorer"
+import ExplorerBurger from "./ExplorerBurger"
 import TagList from "./TagList"
 import Graph from "./Graph"
 import Backlinks from "./Backlinks"
@@ -32,6 +33,7 @@ export {
   Spacer,
   TableOfContents,
   Explorer,
+  ExplorerBurger,
   TagList,
   Graph,
   Backlinks,
