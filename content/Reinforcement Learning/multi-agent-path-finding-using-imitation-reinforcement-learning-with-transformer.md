@@ -15,3 +15,11 @@ Each robot learns its own Q-function. Somehow the world state has to be encoded 
 - The tensor has six channels. Each channel has the size $l\times l$ whereas $l\times l$ is the field of view of the model.
 - The first channel contains the position of all other robots. In the $l \times l$ grid each cell where there is a robot is marked with 1. All other cells are 0.
 - The second channel is the same as the first, but the locations of the obstacles instead of other robots are marked with a 1.
+- The four other channels are called “heuristics channels”. The authors take the idea from [this][heuristics_publication] publication. The idea is simple:
+  - Each robot uses a simple RL-function to learn all the shortest paths to the goal
+  - Each of the four channels corresponds to the action up, left, right or down
+  - A grid cell in the channel has the value 1 if the robot gets closer to the goal when being at the location of the grid cell and doing the action of the channel
+
+# References
+
+Distributed Heuristic Multi-Agent Path Finding with Communication (https://ieeexplore.ieee.org/document/9560748)

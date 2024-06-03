@@ -13,7 +13,7 @@ In data poisoning we intentionally add incorrectly labeled data to our training.
 
 We also have the option to only add a small number of wrong data points. This way we can decrease the accuracy of the model without anyone noticing that the actual accuracy of the model could be higher.
 
-Data poisoning can for example be used in [Federated Learning](Deep Learning Concepts\Federated Learning.md). Here we poison the training data on one of our client devices. The weights of the fine-tuned model which the server will use are then compromised.
+Data poisoning can for example be used in [Federated Learning](Deep Learning Concepts/Federated Learning.md). Here we poison the training data on one of our client devices. The weights of the fine-tuned model which the server will use are then compromised.
 
 ---
 

@@ -1,5 +1,3 @@
-**Autoencoder**
-
 # Classic Autoencoder
 
 An Autoencoder (AE) consists of three parts: The **Encoder**, the **Bottleneck Layer** and the **Decoder**.
