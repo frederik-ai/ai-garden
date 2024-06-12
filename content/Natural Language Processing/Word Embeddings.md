@@ -2,7 +2,7 @@
 
 NNs work with vectorized input data. They do not understand language. This is why we somehow have to vectorize our characters of a word or our words of a sentence.
 
-The idea for this is the following: First, we convert our word into a one-hot vector. Whereas the length of the vector corresponds to the size of our vocabulary (i.e. all characters or words that our model can receive). Embeddings then convert this one-hot vector to a vector of n dimensions. The embedding layer consists of a matrix which yields a different output vector for each element of our vocabulary.
+The idea for this is the following: First, we convert our sentene into a one-hot vector. Whereas the length of the vector corresponds to the size of our vocabulary (i.e. all characters or words that our model can receive). Embeddings then convert this one-hot vector to a vector of n dimensions. The embedding layer consists of a matrix which yields a different output vector for each element of our vocabulary.
 
 In the following example we have a one-hot vector which we multiply with the matrix of our embedding layer. 
 $$

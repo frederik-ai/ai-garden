@@ -31,7 +31,7 @@ The following figure shows a section of a complete ResNet architecture. Packages
 
 This approach also solves the Vanishing Gradient Problem.
 
-# Sources
+# References
 
 [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 
