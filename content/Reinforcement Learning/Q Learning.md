@@ -21,9 +21,3 @@ $$
 >
 > Video about Double Deep Q-Learning: [Double DQN - YouTube](https://www.youtube.com/watch?v=Lb5ADHnRQV8)
 
-# Multi-Agent Q-Learning
-
-Q-Learning cannot only be used for a single agent. We can use it to learn the state-action pairs for multiple agents. In this case our Q-table can become very large, because for each state we have lots of combinations of different actions from all our agents.
-
-Therefore multi-agent Q-Learning is infeasable using traditional approaches. However, we can instead use DNNs to model this problem.
-
