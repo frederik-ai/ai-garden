@@ -1,6 +1,6 @@
 SHAP is one of the most popular methods of explainability. 
 
-# Shapely Values
+# Shapley Values
 
 This explainability method is based on Shapely values, a concept from game theory. It operates in the following scenario:
 
@@ -15,3 +15,4 @@ To calculate Shapely values, we analyze how the coalition would perform if each 
 - A player's contribution is assessed by averaging the reward across all coalitions in which they participated
 
 This yields the player's *marginal contribution*, which indicates their impact on the coalition's success.
+
