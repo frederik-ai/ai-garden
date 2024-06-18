@@ -13,3 +13,7 @@ In a [CNN](#CNN) a feature map is the resulting tensor we get by applying our co
 *Feature map obtained after applying a convolution. Feature map is here denoted as “Convolved Feature” ([Source](https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/))*
 
 ---
+
+#### XAI
+
+Explainable AI
