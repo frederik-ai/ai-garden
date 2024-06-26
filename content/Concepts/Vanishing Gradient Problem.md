@@ -8,6 +8,8 @@ The vanishing gradient problem can occur if we have an activation function with 
 
 For $x < -2.5$ and $x > 2.5$ the derivative of the sigmoid function begins to approach zero. If our activations are in these saturated regions, our network will hardly learn anything.
 
+Note that this is especially a problem for Recurrent Neural Networks.
+
 # How to mitigate it?
 
 We can use [Batch Normalization](Batch Normalization.md) to move our activation values to a particular mean value. In the sigmoid function we could for example use a mean of $0$ and an std of $2.5$​.
