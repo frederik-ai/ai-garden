@@ -1,4 +1,4 @@
->  A very good explanation of diffusion models is available here: [Step by Step visual introduction to Diffusion Models. - Blog by Kemal Erdem](https://erdem.pl/2023/11/step-by-step-visual-introduction-to-diffusion-models)
+>  An excellent explanation of diffusion models is available here: [Step by Step visual introduction to Diffusion Models. - Blog by Kemal Erdem](https://erdem.pl/2023/11/step-by-step-visual-introduction-to-diffusion-models)
 
 The general idea of diffusion models is the following:
 

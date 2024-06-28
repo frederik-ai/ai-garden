@@ -24,7 +24,7 @@ The Decoder tries to reconstruct our input from the Bottleneck Layer. In normal 
 
 ## Optimization
 
-The main objective is to minimize the error between the input $x$ and the reconstructed input $\hat{x}$​.
+The main objective is to minimize the error between the input $x$ and the reconstructed input $\hat{x}$​. This can be formalized as $\mathcal{L}_{\mathrm{VAE}} = ||x-\hat{x}||_2^2$.
 
 ---
 
