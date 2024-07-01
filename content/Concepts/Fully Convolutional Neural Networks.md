@@ -1,0 +1,3 @@
+These are CNNs that do not use any fully-connected layers. These are for example used for image segmentation. One of the main advantages is that these CNNs are independent from the size of the input. The only requirement is that the input is at least as big as the kernel size. This makes Fully Convolutional Neural Networks quite flexible.
+
+In segmentation these types of CNNs are useful because we have to retain the spatial information of our input. Besides knowing what objects there are in our image we need to know where precicely to locate them. This is why thoughout the whole network we need a spatial representation in means of feature maps instead of flattening them at some point and applying a fully-connected layer.
