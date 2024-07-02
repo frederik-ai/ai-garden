@@ -51,3 +51,37 @@ For the encoder we introduce a distribution $q(z|x)$​. It learns a mapping fro
 ---
 
 ## Optimization
+
+### General Idea
+
+What we actually want to optimize is $\max_\theta \sum_i \log{p_\theta(x_i)}$. We want to find those parameters $\theta$ for which the decoder yields a high probability of generating our input images. The problem is that in order to optimize this we need to know the values of $p_\theta(x_i)$. In our VAE those would be calculated via:
+$$
+p(x) = \int p(x|z)\cdotp(z) \,\mathrm{d}z
+$$
+Here we just use the continuous case of the basic law of probability that $P(B)=\sum_A P(B|A) \cdot P(A)$. The problem is this integral that we get in $p(x)$ is absolutely infeasible. We would have to sample a lot of values from the latent space to approximate this integral.
+
+### Actual Optimization Objective
+
+The problem in the previous section shows that we need our encoder for efficient optimization. It learns to know the likelihood of latent values given a specific input example.
+
+The objective is defined as:
+$$
+\min -\mathbb{E}_{z\sim q_\phi(z|x)}\log p_\theta(x|z) + \mathrm{KL}(q_\phi(z|x)||p_\theta(z))
+$$
+Firstly $\mathbb{E}_{z\sim q_\phi(z|x)}$ tells us that we want to know the expectation of something when we sample a random $z$ from our distribution $q_\phi(z|x)$ for an input image $x$. By sampling from $q_\phi(z|x)$ we will mostly get latent variables that are actually likely to have been produced by our encoder for the given input $x$. What we then want to maximize the expectation over is $\log p_\theta(x|z)$. This simply means the following: We have now sampled a $z$ for a given $x$ and we want our decoder $p_\theta$ to be likely to produce the datapoint $x$ if it is given our sampled $z$. If this is the case, the decoder has correctly learned what parts of the latent space correspond to which type of output image.
+
+In order to ensure that this latent space is smooth and that neighboring latent values also result in similar outputs, we add a KL-divergence term. It just ensures that if the encoder says that specific latent values $z$ are likely, the decoder should also say that they are likely. Therefore we want those distributions to be similar. This is a **regularization term**.
+
+### Reparametrization Trick
+
+There actually is one problem left. Doing the sampling of $z$ directly is inefficient and it is not differentiable. The latter aspect is necessary in order to do backpropagation.
+
+We assume that $z$ is distributed as a multivariate Gaussian via $q_\phi(z|x)$. Our encoder therefore has to learn the parameters $\mu$ and $\sigma$ that make up our Gaussian $\mathcal{N}(\mu,\sigma)$. Here we now see the problem that we optimize the parameters of the distribution from which we sample. We would have to do backpropagation through this sampling process. To avoid this, we can use the reparametrization trick. 
+
+In the reparamatrization trick we firstly always sample some $\epsilon$ from a standard Gaussian $\mathcal{N}(0,1)$. Then, we use the learned parameters $\mu$ and $\sigma$ to calculate our $z$ as:
+$$
+z = \mu + \sigma \odot \epsilon \, ,\quad \epsilon \sim \mathcal{N}(0,1)
+$$
+The parameters are now used in a standard arithmetic operation to obtain our $z$ instead of directly using them in a sampling function. This way, it is possible to od backprop.
+
+What we also see is what the encoder will actually predict. Given an input image $x$ it learns to predict the mean and std of each entry in $z$. This way the encoder gives us a Gaussian distribution which tells us in what areas this image is likely to be contained in our latent space. Thus fulfilling the task of modeling our probability distribution $q_\phi(z|x)$.
