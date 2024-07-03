@@ -10,7 +10,7 @@ The following figure illustrates this idea. Here, *cov* stands for *Covariance*.
 
 ---
 
-![Visualization of different covariances of $X$ and $Y$ ([Source](https://byjus.com/maths/covariance/))](../assets/covariance-2.png)
+![Visualization of different covariances of $X$ and $Y$ ([Source](https://byjus.com/maths/covariance/))](../../assets/covariance-2.png)
 
 *Visualization of different covariances of $X$ and $Y$​ ([Source](https://byjus.com/maths/covariance/))*
 
