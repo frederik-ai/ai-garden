@@ -72,6 +72,12 @@ Firstly $\mathbb{E}_{z\sim q_\phi(z|x)}$ tells us that we want to know the expec
 
 In order to ensure that this latent space is smooth and that neighboring latent values also result in similar outputs, we add a KL-divergence term. It just ensures that if the encoder says that specific latent values $z$ are likely, the decoder should also say that they are likely. Therefore we want those distributions to be similar. This is a **regularization term**.
 
+The given formula is also called the ELBO (Evidence Lower Bound). It holds true that:
+$$
+\log p(x) \le \mathbb{E}_{z\sim q_\phi(z|x)}\log p(x|z) - \mathrm{KL}(q_\phi(z|x)||p_\theta(z))
+$$
+The KL-divergence actually makes sure that the difference between the evidence $p(x)$ and the ELBO is as small as possible. Therefore by maximizing the ELBO we also maximize $p(x)$.
+
 ### Reparametrization Trick
 
 There actually is one problem left. Doing the sampling of $z$ directly is inefficient and it is not differentiable. The latter aspect is necessary in order to do backpropagation.

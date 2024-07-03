@@ -14,7 +14,7 @@ The quality of the Generator is determined by how similar the probability distri
 
 ![Visualisierung der Pipeline eines GAN ([Quelle](https://sthalles.github.io/intro-to-gans/))](../assets/GANs.jpg)
 
-*Visualization of a GAN pipeline ([Quelle](https://sthalles.github.io/intro-to-gans/))*
+*Visualization of a GAN pipeline ([Source](https://sthalles.github.io/intro-to-gans))*
 
 ---
 
@@ -31,7 +31,7 @@ Training involves a min-max problem. The Generator tries to minimize $V(D,G)$ wh
 The function $V(D,G)$ is based on a logarithmic loss function. The following term from the cost function represents the error rate of the Discriminator on the real training data:
 
 $$
-\mathbb{E}_x[\log(D(x))
+\mathbb{E}_x[\log(D(x))]
 $$
 
 The question is: If I draw a random image $x$ from the training data, how likely is it that the Discriminator classifies it as real? The value for $\log⁡(D(x))$ should be close to 0 because for each real training image $x$ we expect $D(x)$ to output a value close to 1.
